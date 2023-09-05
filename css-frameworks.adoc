@@ -1,0 +1,48 @@
+:imagesdir: ./imgs
+:includedir: ../snippets
+:source-highlighter: highlight.js
+:doctype: book
+:toc: left
+:toclevels: 5
+:icons: font
+:hide-uri-scheme:
+
+= CSS Frameworks
+Jonas Froeller
+1.0.2, {docdate}
+
+== Pico CSS:
+Docs: https://picocss.com/docs/
+
+Installation: +
+`npm i @picocss/pico`
+
+*+layout.svelte:*
+[source,js]
+----
+<script>
+  import '@picocss/pico'
+  import '../app.css'
+</script>
+----
+
+=== Example:
+
+*+page.svelte:*
+[source,js]
+----
+<input type="checkbox" role="switch" />
+----
+
+=== Custom Themes:
+
+*All Variables:* https://github.com/picocss/pico/blob/master/css/themes/default.css +
+*Info:* https://picocss.com/docs/customization.html
+
+*app.css:*
+[source,js]
+----
+:root {
+  --primary: aqua;
+}
+----

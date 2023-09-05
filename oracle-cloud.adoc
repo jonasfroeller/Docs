@@ -1,0 +1,51 @@
+:sourcedir: ../src/main/java
+:imagesdir: ./imgs
+:icons: font
+:toc: left
+:sectnums:
+:hide-uri-scheme:
+
+= ORACLE CLOUD
+Jonas Froeller
+1.0.3, {docdate}
+
+== init oracle cloud setup
+
+Create new vm instance:
+
+image::create-vm.png[]
+
+Image:
+
+image::image.png[]
+
+shape:
+
+image::shape.png[]
+image::shape-setting.png[]
+
+download keys!
+
+image::download-keys.png[]
+
+boot volume:
+
+image::boot-volume.png[]
+
+=== connect to instance
+
+delete rights:
+
+image::delete-rights.png[]
+
+choose principal:
+
+image::select-new-object.png[]
+
+chmod 777 principal:
+
+image::enable-full-access.png[]
+
+https://docs.oracle.com/en/cloud/cloud-at-customer/occ-get-started/log-vm-using-ssh.html
+
+`ssh <name (os name or username)>@<ip> -i <file_name>.key`

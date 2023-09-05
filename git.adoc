@@ -1,0 +1,17 @@
+:doctype: book
+:toc: left
+:toclevels: 5
+:icons: font
+:hide-uri-scheme:
+
+= GIT & GITHUB
+Jonas Froeller
+1.0.1, {docdate}
+
+== GH-CLI
+Docs: https://cli.github.com/manual/
+
+*most important:*
+
+`gh auth login` +
+`gh repo create`

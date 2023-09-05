@@ -1,0 +1,40 @@
+:imagesdir: ./imgs
+:includedir: ../snippets
+:source-highlighter: highlight.js
+:doctype: book
+:toc: left
+:toclevels: 5
+:icons: font
+:hide-uri-scheme:
+
+= NGINX
+Jonas Froeller
+1.0.0, {docdate}
+
+== Easy Setup using Webinoly
+
+docu: https://webinoly.com/documentation/ +
+Install: https://webinoly.com/install/ +
+
+`apt update && sudo apt upgrade` +
+`wget -qO weby qrok.es/wy && sudo bash weby -nginx` // only nginx +
+`wget -qO weby qrok.es/wy && sudo bash weby 3` // nginx, mariadb, php (don't forget to save the database login)
+
+open ports: +
+`iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT` +
+`iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT` +
+`iptables -I INPUT 6 -m state --state NEW -p tcp --dport 22222 -j ACCEPT` +
+`sudo netfilter-persistent save` // save +
+`iptables -L` // show open ports
+
+create site: `sudo site <example.com> -html` // simple static html site
+
+add cert: `sudo site <example.com> -ssl=on`
+
+enable sftp: `sudo webinoly -login-www-data=on`
+
+HTML File location: ~/www/<example.com>/htdocs
+webinoly config: /opt/webinoly/webinoly.conf
+
+== Alternative Using Docker
+https://youtu.be/qxPdd-geqqA
