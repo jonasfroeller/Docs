@@ -6,7 +6,7 @@
 
 = GIT & GITHUB
 Jonas Froeller
-1.0.1, {docdate}
+1.0.3, {docdate}
 
 == GH-CLI
 Docs: https://cli.github.com/manual/
@@ -15,3 +15,14 @@ Docs: https://cli.github.com/manual/
 
 `gh auth login` +
 `gh repo create`
+
+== Pull all Branches
+```sh
+git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+git fetch --all
+git pull --all
+```
+
+== Git Secrets
+https://github.com/sobolevn/git-secret +
+https://sobolevn.me/git-secret

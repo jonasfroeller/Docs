@@ -1,0 +1,22 @@
+:doctype: book
+:toc: left
+:toclevels: 5
+:icons: font
+:hide-uri-scheme:
+
+= AsciiDoctor to PDF
+Jonas Froeller
+1.0.0, {docdate}
+
+== Install Ruby
+https://www.ruby-lang.org/en/downloads/
+
+== Install Asciidoctor-PDF
+```sh
+gem install asciidoctor-pdf
+```
+
+== Run Asciidoctor-PDF
+```sh
+asciidoctor-pdf your-adoc-file.adoc
+```
